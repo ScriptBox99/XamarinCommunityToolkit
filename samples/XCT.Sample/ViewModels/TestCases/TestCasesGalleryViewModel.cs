@@ -10,9 +10,14 @@ namespace Xamarin.CommunityToolkit.Sample.ViewModels.TestCases
 		protected override IEnumerable<SectionModel> CreateItems() => new[]
 		{
 			new SectionModel(
+				typeof(GH_BUG_1761),
+				"Popup, GitHub #1761",
+				"Popup, GitHub #1761"),
+
+			new SectionModel(
 				typeof(TouchEffectButtonPage),
 				"TouchEffect + Button",
-				"TouchEffect must automatically invoke button'c command execution."),
+				"TouchEffect must automatically invoke button's command execution."),
 
 			new SectionModel(
 				typeof(TouchEffectCollectionViewPage),
@@ -38,6 +43,11 @@ namespace Xamarin.CommunityToolkit.Sample.ViewModels.TestCases
 				typeof(LinkerCameraViewPage),
 				"Linker for CameraView",
 				"Make sure that Linker is keeping the MediaCaptured and MediaCaptureFailed events if they are used."),
+
+			new SectionModel(
+				typeof(SnackBarActionExceptionPage),
+				"SnackBar Action Exception",
+				"Exception in SnackBar's action doesn't crash the app."),
 		};
 	}
 }
